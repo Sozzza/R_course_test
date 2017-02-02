@@ -1,1 +1,18 @@
+source("C:/Users/awiadm/Desktop/R_course/R_course_test/01_import.R")
 
+View (myData.p1)
+plot(myData.p1$carbon_content, myData.p1$diameter_1_µm)
+
+p1.lm <- lm(
+  +     carbon_content ~ diameter_1_µm,
+  +     data = myData.p1)
+p1.lm
+
+Call:
+  lm(formula = carbon_content ~ diameter_1_µm, data = myData.p1)
+
+Coefficients:
+  (Intercept) diameter_1_µm  
+(-9.392e-08      2.234e-09) 
+
+ plot(p1.lm)
